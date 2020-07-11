@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mail Bell - Privacy Policy</title>
+	<link rel="shortcut icon" href="bell.svg">
+	<meta name="robots" content="noindex, follow">
+	<style>
+		body {
+			font-family: sans-serif;
+			font-size: 16px;
+			margin: auto;
+			padding: 2rem 4rem;
+			max-width: 640px;
+			line-height: 1.5;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: 400;
+		}
+		h2 {
+			font-size: 1.2rem;
+		}
+		article ol {
+			padding-left: 1rem;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Mail Bell Privacy Notice</h1>
+	<h3>Last updated February 20, 2020</h3>
+	<article>
+		<ol>
+			<li>
+				<h2>WHAT INFORMATION DO WE COLLECT?</h2>
+				<p>
+					Mail Bell does not ask user to provide any personal information. It is an email notification browser
+					extensions, user must already own an email account to be able to use the program.
+				</p>
+				<p>
+					However, for Mail Bell to provide useful service, it needs to access user's email data. Specifically, it
+					reads the following data from user's email provider.
+				</p>
+				<ol>
+					<li>Email address</li>
+					<li>First name</li>
+					<li>Profile picture</li>
+					<li>Email headers, including "from", "to", "cc", "subject", "date" and the email body snippet.</li>
+					<li>Email labels</li>
+				</ol>
+				<p>
+					Mail Bell also offers functionality to manage incoming emails, including mark email as read, archive email,
+					mark email as spam, move email into trash and star email. Such functionality requires write access to user's
+					email account.
+				</p>
+			</li>
+			<li>
+				<h2>WILL YOUR INFORMATION BE SHARED WITH ANYONE?</h2>
+				<p>
+					No. Mail Bell runs inside of the user's web browser, all user data are stored within the browser. Data is not
+					send to anyone as we do not operate any server-side components.
+				</p>
+			</li>
+			<li>
+				<h2>HOW LONG DO WE KEEP YOUR INFORMATION?</h2>
+				<p>
+					Information is kept in your browser for as long as necessary to permit Mail Bell's operation.
+				</p>
+			</li>
+			<li>
+				<h2>DO WE COLLECT INFORMATION FROM MINORS?</h2>
+				<p>
+					We do not knowingly collect data from or market to children under 18 years of age.
+				</p>
+			</li>
+			<li>
+				<h2>WHAT ARE YOUR PRIVACY RIGHTS?</h2>
+				<p>
+					Mail Bell does not request user to provide personal data, user's privacy rights are provided by user's email
+					service provider.
+				</p>
+			</li>
+			<li>
+				<h2>CONTROLS FOR DO-NOT-TRACK FEATURES</h2>
+				<p>
+					We do not track user's activities.
+				</p>
+			</li>
+			<li>
+				<h2>DO WE MAKE UPDATES TO THIS POLICY?</h2>
+				<p>
+					Yes, we will update this policy as necessary to stay compliant with relevant laws. The updated version will
+					be indicated by an updated “Revised” date and the updated version will be effective as soon as it is
+					accessible.
+				</p>
+			</li>
+			<li>
+				<h2>HOW CAN YOU CONTACT US ABOUT THIS POLICY?</h2>
+				<p>
+					If you have questions or comments about this policy, you may email us at <canvas id="canvas" width="132" height="14"></canvas>
+				</p>
+			</li>
+		</ol>
+	</article>
+	<script>
+		var code = [97,57,117,100,110,57,117,64,103,109,97,105,108,46,99,111,109].reduce(function(a, b) {
+			return a + String.fromCharCode(b)
+		}, '');
+		var ctx = document.getElementById("canvas").getContext("2d");
+		ctx.font = "14px arial";
+		ctx.fillText(code, 0, 11);
+	</script>
+</body>
+</htm>

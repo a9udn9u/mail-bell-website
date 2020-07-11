@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mail Bell</title>
+    <link rel="shortcut icon" href="bell.svg">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        background-color: #ffde56;
+      }
+      .invisible {
+        opacity: 0;
+      }
+      article {
+        width: 796px;
+        margin: auto;
+        transition: opacity .34s ease-out;
+      }
+      header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 4rem 0;
+      }
+      header img {
+        width: 6rem;
+      }
+      header h1, header h2, main h3 {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif;
+        margin: 0 0 0 2rem;
+      }
+      header h1 {
+        font-weight: 100;
+        font-size: 4rem;
+      }
+      header h2 {
+        font-weight: 200;
+        font-size: 1.2rem;
+      }
+      main {
+        font-family: 'Crimson Text', Georgia, Serif;
+        font-size: 2rem;
+        margin-bottom: 16rem;
+      }
+      main a {
+        color: #558dff;
+        text-decoration: none;
+      }
+      main > summary, main > p {
+        margin-bottom: 2rem;
+        line-height: 1.5;
+      }
+      main h3 {
+        font-size: 2.5rem;
+        margin: 3rem 0 1rem 0;
+        font-weight: 100;
+      }
+      main p.col {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      main p.left img {
+        margin-right: 2rem;
+      }
+      main p.right img {
+        margin-left: 2rem;
+      }
+      main .notif img {
+        width: 8rem;
+      }
+      main .ui img,
+      main .op img {
+        width: 19rem;
+      }
+      main .perm img {
+        width: 100%;
+        margin: 2rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="invisible">
+      <header>
+        <img src="bell.svg">
+        <section>
+          <h1>Mail Bell</h1>
+          <h2>Minimalist email notifier. Simple, sharp and sweet.</h2>
+        </section>
+      </header>
+      <main>
+        <summary>
+          Mail Bell is an unintrusive, minimalist email notifier for Google Chrome and Microsoft Edge. When new emails arrive at your inbox, Mail Bell rings so you don't miss them. Moreover, it empowers you to complete common email tasks without interrupting your browsing experience.
+        </summary>
+
+        <h3>Notification</h3>
+        <p class="notif col right">
+          With real time email notification, you will always be on top of your inbox.
+          <img src="notif.svg"/>
+        </p>
+
+        <h3>Interface</h3>
+        <p class="ui col left">
+          <img src="ui.png"/>
+          Clear, freshening, intuitive user interface.<br><br>
+          Mail Bell doesn't try to be a full-fledged email client, it complements tools offered by email providers.
+        </p>
+
+        <h3>Convenience</h3>
+        <p class="op col right">
+          Common message operations are built into the interface seamlessly. You can manage emails without switching windows or tabs.
+          <img src="op.png"/>
+        </p>
+
+        <h3>Minimum Permissions & Privacy</h3>
+        <p class="perm">
+          Mail Bell only requires the least possible permissions to operate. You are in control of additional permissions.
+          <img src="perm.png"/>
+          Upon installation, it will ask for permission to access your email account, rest assured, this process is between you and your email provider, Mail Bell will not get your password, neither will it send your personal data to anyone. It all stays within your browser. If you have a moment, take a look at our <a href="privacy.html">Privacy Policy</a>.
+        </p>
+
+        <h3>Supported Email Services</h3>
+        <p class="vendors">
+          Currently Mail Bell works with Google Gmail. Support for Yahoo Mail and Outlook is in the work.
+        </p>
+      </main>
+      <footer>
+      </footer>
+    </article>
+    <script>
+      window.onload = function() {
+        var els = document.getElementsByClassName('invisible');
+        for (var i = 0; i < els.length; ++i) {
+          els[i].classList.remove('invisible');
+        }
+      }
+    </script>
+  </body>
+</html>
