@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>Mail Bell</title>
@@ -15,7 +15,7 @@
 			.invisible {
 				opacity: 0;
 			}
-			article {
+			main {
 				width: 796px;
 				margin: auto;
 				transition: opacity .34s ease-out;
@@ -29,7 +29,7 @@
 			header img {
 				width: 6rem;
 			}
-			header h1, header h2, main h3 {
+			header h1, header h2, article h3 {
 				font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif;
 				margin: 0 0 0 2rem;
 			}
@@ -41,61 +41,60 @@
 				font-weight: 200;
 				font-size: 1.2rem;
 			}
-			main {
+			article {
 				font-family: 'Crimson Text', Georgia, Serif;
 				font-size: 2rem;
 				margin-bottom: 16rem;
 			}
-			main a {
+			article a {
 				color: #558dff;
 				text-decoration: none;
 			}
-			main > summary, main > p {
+			article > * {
 				margin-bottom: 2rem;
 				line-height: 1.5;
 			}
-			main h3 {
+			article h3 {
 				font-size: 2.5rem;
 				margin: 3rem 0 1rem 0;
 				font-weight: 100;
 			}
-			main p.col {
+			article p.col {
 				display: flex;
 				flex-direction: row;
 				align-items: flex-start;
 			}
-			main p.left img {
+			article p.left img {
 				margin-right: 2rem;
 			}
-			main p.right img {
+			article p.right img {
 				margin-left: 2rem;
 			}
-			main .notif img {
+			article .notif img {
 				width: 8rem;
 			}
-			main .ui img,
-			main .op img {
+			article .ui img, article .op img {
 				width: 19rem;
 			}
-			main .op img {
+			article .op img {
 				margin-top: -5rem;
 			}
-			main .perm img {
+			article .perm img {
 				width: 100%;
 				margin: 2rem 0;
 			}
 		</style>
 	</head>
 	<body>
-		<article class="invisible">
+		<main class="invisible">
 			<header>
-				<img src="bell.svg">
+				<img alt="Mail Bell logo" src="bell.svg">
 				<section>
 					<h1>Mail Bell</h1>
 					<h2>Minimalist email notifier. Simple, sharp and sweet.</h2>
 				</section>
 			</header>
-			<main>
+			<article>
 				<summary>
 					Mail Bell is an unintrusive, minimalist email notifier for Google Chrome and Microsoft Edge. When new emails arrive at your inbox, Mail Bell rings so you don't miss them. Moreover, it empowers you to complete common email tasks without interrupting your browsing experience.
 				</summary>
@@ -103,12 +102,12 @@
 				<h3>Notification</h3>
 				<p class="notif col right">
 					With real time email notification, you will always be on top of your inbox.
-					<img src="notif.svg"/>
+					<img alt="Mail Bell notification icon" src="notif.svg"/>
 				</p>
 
 				<h3>Interface</h3>
 				<p class="ui col left">
-					<img src="ui.png"/>
+					<img alt="Mail Bell user interface" src="ui.png"/>
 					Clear, freshening, intuitive user interface.<br><br>
 					Mail Bell doesn't try to be a full-fledged email client, it complements tools offered by email providers.
 				</p>
@@ -116,24 +115,29 @@
 				<h3>Convenience</h3>
 				<p class="op col right">
 					Common message operations are built into the interface seamlessly. You can manage emails without switching windows or tabs.
-					<img src="op.png"/>
+					<img alt="Mail Bell email operations" src="op.png"/>
 				</p>
 
-				<h3>Minimum Permissions & Privacy</h3>
-				<p class="perm">
-					Mail Bell only requires the least possible permissions to operate. You are in control of additional permissions.
-					<img src="perm.png"/>
-					Upon installation, it will ask for permission to access your email account, rest assured, this process is between you and your email provider, Mail Bell will not get your password, neither will it send your personal data to anyone. It all stays within your browser. If you have a moment, take a look at our <a href="privacy.html">Privacy Policy</a>.
-				</p>
+				<h3>Minimum Permissions & Maximum Privacy</h3>
+				<section class="perm">
+					<p>
+						Mail Bell only requires the least possible permissions to operate. You are in control of additional permissions.
+						<img alt="Mail Bell requesting optional permissions" src="perm.png">
+						Upon installation, it will ask for permission to access your email account. Rest assured, this process is between you and your email provider, Mail Bell will not get your password, neither will it send your personal data to anyone. It all stays within your browser. If you have a moment, take a look at our <a href="privacy.html">Privacy Policy</a>, it's simple and easy to understand.
+					</p>
+					<p>
+						Mail Bell uses Google APIs to access Gmail data, the use of information received from Google APIs will adhere to <a noopener noreferrer target="_blank" href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes">Google API Services User Data Policy</a>, including the Limited Use requirements.
+					</p>
+				</section>
 
 				<h3>Supported Email Services</h3>
 				<p class="vendors">
 					Currently Mail Bell works with Google Gmail. Support for Yahoo Mail and Outlook is in the work.
 				</p>
-			</main>
+			</article>
 			<footer>
 			</footer>
-		</article>
+		</main>
 		<script>
 			window.onload = function() {
 				var els = document.getElementsByClassName('invisible');
